@@ -1,0 +1,9 @@
+Prometheus Installation with helm
+
+helm install prometheus stable/prometheus-operator
+helm install stable/prometheus-operator
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm search repo prometheus-community
+helm repo update
+helm install prometheus prometheus-community/kube-prometheus-stack
+kubectl get pod

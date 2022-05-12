@@ -1,0 +1,11 @@
+kubectl get pods
+kubectl apply -f mongodb-without-exporter.yml
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts\nhelm repo update
+helm show values prometheus-community/prometheus-mongodb-exporter
+helm show values prometheus-community/prometheus-mongodb-exporter > values.yaml
+bat values.yaml
+helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter -f values.yaml
+kubectl get servicemonitor mongodb-exporter-prometheus-mongodb-exporter -o yaml
+kubectl get svc
+kubectl port-forward service/mongodb-exporter-prometheus-mongodb-exporter 9216

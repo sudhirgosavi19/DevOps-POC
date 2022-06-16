@@ -5,8 +5,10 @@ import (
 	"os"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
+
+	//"github.com/aws/aws-sdk-go/aws/config"
+	"github.com/aws/aws-sdk-go/aws/session"
 )
 
 // Lists the items in the specified S3 Bucket

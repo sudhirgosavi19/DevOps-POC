@@ -1,4 +1,4 @@
-package buckets
+package bucket
 
 import (
 	"fmt"

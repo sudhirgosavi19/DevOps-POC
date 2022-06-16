@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -13,7 +14,12 @@ import (
 //
 // Usage:
 //    go run s3_list_objects.go BUCKET_NAME
+
 func main() {
+	currentTime := time.Now()
+	currentTime.Format("2006-01-02")
+	fmt.Println("YYYY-MM-DD : ", currentTime.Format("2006-01-02"))
+
 	if len(os.Args) != 2 {
 		exitErrorf("Bucket name required\nUsage: %s bucket_name",
 			os.Args[0])
@@ -38,10 +44,10 @@ func main() {
 
 	for _, item := range resp.Contents {
 		fmt.Println("Name:         ", *item.Key)
-		fmt.Println("Last modified:", *item.LastModified)
-		fmt.Println("Size:         ", *item.Size)
-		fmt.Println("Storage class:", *item.StorageClass)
-		fmt.Println("")
+		//fmt.Println("Last modified:", *item.LastModified)
+		//fmt.Println("Size:         ", *item.Size)
+		//fmt.Println("Storage class:", *item.StorageClass)
+		//fmt.Println("")
 	}
 
 	fmt.Println("Found", len(resp.Contents), "items in bucket", bucket)

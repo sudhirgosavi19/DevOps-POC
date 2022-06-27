@@ -1,0 +1,12 @@
+YYYY-MM-DD :  2022-06-25
+file name :  test-billing-v1/TestReport-v1/20220601-20220701/20220625T001639Z/TestReport-v1-00001.csv.gz
+1534
+File name :  file-1-2022-06-25.csv.gz
+file name :  test-billing-v1/TestReport-v1/20220601-20220701/20220625T001639Z/TestReport-v1-00002.csv.gz
+428688
+File name :  file-2-2022-06-25.csv.gz
+file name :  test-billing-v1/TestReport-v1/20220601-20220701/20220625T001639Z/TestReport-v1-00003.csv.gz
+1399
+File name :  file-3-2022-06-25.csv.gz
+<nil>
+{"function":"SendWithCC","level":"info","line":"285","msg":"Email sent through ACL to [{ sudhir.gosavi@dezerv.in} { yashu.gupta@dezerv.in}]. Response: A.1656155795222917816.1.1097","time":"2022-06-25T16:46:35+05:30"}
